@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.20)
+project(clients)
+add_executable(clients homework_07/main.cpp)
+add_subdirectory(./libpqxx-7.9.0 libpqxx-build)
+target_compile_features(clients PRIVATE cxx_std_17)
+target_link_libraries(clients pqxx) 
